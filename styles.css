@@ -26,10 +26,23 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 .pedodancer{
   border:0 solid blue;
   border-radius:0;
   position:absolute;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
 }
 
 .mariodancer{

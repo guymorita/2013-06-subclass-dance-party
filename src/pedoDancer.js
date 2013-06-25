@@ -11,19 +11,6 @@ PedoDancer.prototype.step = function(timeBetweenSteps){
 
   Dancer.prototype.step.call(this, timeBetweenSteps);
 
-  this.$node.css({
-    '-webkit-transform': 'rotate(30deg)',
-    '-moz-transform': 'rotate(30deg)',
-    'transform': 'rotate(30deg)',
-    '-webkit-animation-name': 'spin',
-    '-webkit-animation-iteration-count': 'infinite',
-    '-webkit-animation-timing-function': 'linear',
-    '-webkit-animation-duration': '3s'
-  });
-  this.$node.toggle();
-  setTimeout(function(timeBetweenSteps) {
-    rotate(degrees);
-  },5);
   this.$node.slideDown();
 };
 

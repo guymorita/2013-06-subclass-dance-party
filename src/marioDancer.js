@@ -21,7 +21,6 @@ MarioDancer.prototype.step = function(timeBetweenSteps){
   //   '-webkit-animation-duration': '3s'
   // });
   this.$node.toggle();
-  this.$node.slideUp();
 
 };
 
