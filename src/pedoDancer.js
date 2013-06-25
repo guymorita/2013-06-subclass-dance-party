@@ -8,14 +8,7 @@ PedoDancer.prototype = new Dancer();
 PedoDancer.prototype.constructor = PedoDancer;
 
 PedoDancer.prototype.step = function(timeBetweenSteps){
-  nextAngle = 0;
-  function getNextAngle() {
-      nextAngle += 90;    
-      if(nextAngle >= 360) {
-          nextAngle = 0;
-      }
-      return nextAngle;
-  }
+
   Dancer.prototype.step.call(this, timeBetweenSteps);
 
   this.$node.css({
@@ -28,6 +21,7 @@ PedoDancer.prototype.step = function(timeBetweenSteps){
     '-webkit-animation-duration': '3s'
   });
   this.$node.toggle();
+  this.$node.slideDown();
 };
 
 

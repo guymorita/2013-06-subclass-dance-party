@@ -31,3 +31,9 @@ body, a:link, a:visited, a:active{
   border-radius:0;
   position:absolute;
 }
+
+.mariodancer{
+  border:0 solid blue;
+  border-radius:0;
+  position:absolute;
+}
