@@ -16,11 +16,12 @@
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="PedoDancer">add a pedo dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="MarioDancer">add a mario dancer</a>
-
+      <a href="#" class="lineUpButton">line up</a>
     </div>
 
     <script>
       $(document).ready(function(){
+
         window.dancers = [];
 
         $(".addDancerButton").on("click", function(event){
@@ -40,7 +41,6 @@
 
           // get the maker function for the kind of dancer we're supposed to make
           var dancerMakerFunction = window[dancerMakerFunctionName];
-          // debugger;
 
           // make a dancer with a random position
           var dancer = new dancerMakerFunction(
@@ -48,8 +48,17 @@
             $("body").width() * Math.random(),
             Math.random() * 1000
           );
-
+          window.dancers.push(dancer.$node);
           $('body').append(dancer.$node);
+        });
+        $(".lineUpButton").on("click", function(event){
+          // var dancerMakerFunctionName = $(this).data("lineUpButton");
+
+          // get the maker function for the kind of dancer we're supposed to make
+          // var dancerMakerFunction = window[dancerMakerFunctionName];
+          for (var i = 0; i < dancers.length; i++){
+            Dancer.prototype.lineUp.call(dancers[i]);
+          }
         });
       });
     </script>
