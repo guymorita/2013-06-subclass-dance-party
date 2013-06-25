@@ -4,7 +4,7 @@ var MarioDancer = function(top, left, timeBetweenSteps){
   this.$node.html('<img src= "http://i861.photobucket.com/albums/ab180/l3lackjax/8BitMario-1.png" width=159 height=146 />');  
 };
 
-MarioDancer.prototype = new Dancer();
+MarioDancer.prototype = Object.create(Dancer.prototype);
 MarioDancer.prototype.constructor = MarioDancer;
 
 MarioDancer.prototype.step = function(timeBetweenSteps){
