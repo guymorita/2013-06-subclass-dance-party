@@ -39,6 +39,7 @@ Dancer.prototype.lineUp = function(){
   var styleSettings = {
     left: 100
   };
+  console.log(this);
   this.css(styleSettings);
 };
 

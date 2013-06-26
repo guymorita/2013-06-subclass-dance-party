@@ -1,5 +1,6 @@
 var BlinkyDancer = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
+  this.$node.html('<img src= "https://si0.twimg.com/profile_images/3627005607/2aae0e25c02fe03e8b22437d69d6802c.png" width=125 height=125 />'); 
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
